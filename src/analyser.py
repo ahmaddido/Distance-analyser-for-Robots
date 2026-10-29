@@ -1,4 +1,4 @@
-from func import total_measurments
+from func import total_measurments, minimum_measurment, maximum_measurment, average_measurment
 
 measurments = []
 classifer = {}
@@ -8,7 +8,7 @@ while True:
     if read == "done":
         break
     else:
-        if read.isdigit() and int(read) > 0:
+        if read.isdigit() and int(read) >= 0:
             measurments.append(int(read))
         else:
             print("please enter a valid number")
@@ -22,5 +22,14 @@ for i in measurments:
         classifer[i] = "SAFE"
 
 total_number = total_measurments(measurments)
+minimum = minimum_measurment(measurments)
+maximum = maximum_measurment(measurments)
+average = average_measurment(measurments)
+
+
+
 print(classifer)
-print("Total number is:", total_number)
+print("Total number of measurements is:", total_number)
+print(f"Minimum is {minimum} cm")
+print(f"Maximum is {maximum} cm")
+print(f"Average is {average} cm")

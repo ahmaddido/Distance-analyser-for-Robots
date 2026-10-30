@@ -41,15 +41,6 @@ print(f"Minimum is {minimum} cm and Maximum is {maximum} cm")
 print(f"Average is {average} cm")
 print(f"Total danger readings: {total_danger} \n Total warning readings: {total_warning} \n Total safe readings: {total_safe}")
 
-#decision
-# value = list(classifer.values())
-# for v in value:
-#     if "DANGER" in value:
-#         print("decision: STOP")
-#     elif "WARNING" in value and "SAFE" in value:
-#         print("decision: SLOW")
-#     else:
-#         print("decision: MOVE")
 
 info = decision(classifer)
 print(info)

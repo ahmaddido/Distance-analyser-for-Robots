@@ -16,11 +16,12 @@ def average_measurment(list):
 
 def decision(dict):
     valuss = dict.values()
-    for value in valuss:
-        if value == "DANGER":
-            print("Recommended: STOPPING")
-        elif value == "WARNING":
-            print("Recommended: SLOWING")
-        else:
-            print("Recommended: CONTINUE MOVING")
-    return value
+    if "DANGER" in valuss:
+        return "decision: STOP"
+    elif "WARNING" in valuss and "SAFE" in valuss:
+        return "decision: SLOW"
+    else:
+        return "decision: MOVE"
+    
+
+

@@ -27,8 +27,6 @@ for i in measurments:
         classifer[i] = "SAFE"
         safe_readings.append(i)
 
-info = decision(classifer)
-
 total_number = total_measurments(measurments)
 minimum = minimum_measurment(measurments)
 maximum = maximum_measurment(measurments)
@@ -38,15 +36,20 @@ total_danger = len(danger_readings)
 total_warning = len(warning_readings)
 total_safe = len(safe_readings)
 
-
-
-print(classifer)
 print("Total number of measurements is:", total_number)
-print(f"Minimum is {minimum} cm")
-print(f"Maximum is {maximum} cm")
+print(f"Minimum is {minimum} cm and Maximum is {maximum} cm")
 print(f"Average is {average} cm")
-print("Total danger readings:", total_danger)
-print("Total warning readings:", total_warning)
-print("Total safe readings:", total_safe)
+print(f"Total danger readings: {total_danger} \n Total warning readings: {total_warning} \n Total safe readings: {total_safe}")
 
+#decision
+# value = list(classifer.values())
+# for v in value:
+#     if "DANGER" in value:
+#         print("decision: STOP")
+#     elif "WARNING" in value and "SAFE" in value:
+#         print("decision: SLOW")
+#     else:
+#         print("decision: MOVE")
+
+info = decision(classifer)
 print(info)

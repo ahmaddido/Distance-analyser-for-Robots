@@ -1,4 +1,4 @@
-from func import total_measurments, minimum_measurment, maximum_measurment, average_measurment
+from func import total_measurments, minimum_measurment, maximum_measurment, average_measurment, decision
 
 measurments = []
 classifer = {}
@@ -27,6 +27,8 @@ for i in measurments:
         classifer[i] = "SAFE"
         safe_readings.append(i)
 
+info = decision(classifer)
+
 total_number = total_measurments(measurments)
 minimum = minimum_measurment(measurments)
 maximum = maximum_measurment(measurments)
@@ -46,3 +48,5 @@ print(f"Average is {average} cm")
 print("Total danger readings:", total_danger)
 print("Total warning readings:", total_warning)
 print("Total safe readings:", total_safe)
+
+print(info)

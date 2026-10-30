@@ -8,7 +8,7 @@ safe_readings = []
 
 while True:
     read = input("Enter your measurements in cm or type done to finsih:")
-    if read == "done":
+    if read == "done" or not measurments:
         break
     else:
         if read.isdigit() and int(read) >= 0:
@@ -17,10 +17,10 @@ while True:
             print("please enter a valid number")
 
 for i in measurments:
-    if i < 20:
+    if i <= 20:
         classifer[i] = "DANGER"
         danger_readings.append(i)
-    elif i >= 20 and i < 50:
+    elif i > 20 and i <= 50:
         classifer[i] = "WARNING"
         warning_readings.append(i)
     else:

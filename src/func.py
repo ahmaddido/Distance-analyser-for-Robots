@@ -18,7 +18,7 @@ def decision(dict):
     valuss = dict.values()
     if "DANGER" in valuss:
         return "decision: STOP"
-    elif "WARNING" in valuss and "SAFE" in valuss:
+    elif "WARNING" in valuss:
         return "decision: SLOW"
     else:
         return "decision: MOVE"

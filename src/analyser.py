@@ -8,7 +8,7 @@ safe_readings = []
 
 while True:
     read = input("Enter your measurements in cm or type done to finsih:")
-    if read == "done" or not measurments:
+    if read == "done":
         break
     else:
         if read.isdigit() and int(read) >= 0:
@@ -36,6 +36,7 @@ total_danger = len(danger_readings)
 total_warning = len(warning_readings)
 total_safe = len(safe_readings)
 
+print(classifer)
 print("Total number of measurements is:", total_number)
 print(f"Minimum is {minimum} cm and Maximum is {maximum} cm")
 print(f"Average is {average} cm")

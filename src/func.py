@@ -14,13 +14,24 @@ def total_measurments(list):
 #     average = sum(list) / len(list)
 #     return average
 
+# def decision(dict):
+#     keyss = dict.keys()
+#     if "DANGER" in keyss:
+#         return "decision: STOP"
+#     elif "WARNING" in keyss:
+#         return "decision: SLOW"
+#     elif "SAFE" in keyss:
+#         return "decision: MOVE"
+#     else:
+#         pass
+
 def decision(dict):
     keyss = dict.keys()
-    if "DANGER" in keyss:
+    if dict["DANGER"] > 0 :
         return "decision: STOP"
-    elif "WARNING" in keyss:
+    elif (dict["WARNING"] > 0 and dict["DANGER"] == 0):
         return "decision: SLOW"
-    elif "SAFE" in keyss:
+    elif dict["SAFE"] > 0:
         return "decision: MOVE"
     else:
         pass

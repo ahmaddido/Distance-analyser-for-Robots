@@ -53,13 +53,17 @@ for i in measurments:
     if i <= 20:
         d = d+1 
         classifcation.update({"DANGER": d})
+        print(f"{i} cm -> DANGER")
 
     elif i > 20 and i <= 50:
         w = w+1 
         classifcation.update({"WARNING": w})
+        print(f"{i} cm -> WARNING")
+
     else:
         s = s+1 
         classifcation.update({"SAFE": s})
+        print(f"{i} cm -> SAFE")
 
 
 total_number = total_measurments(measurments)

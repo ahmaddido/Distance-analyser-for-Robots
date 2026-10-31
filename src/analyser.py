@@ -6,6 +6,17 @@ danger_readings = []
 warning_readings = []
 safe_readings = []
 
+def print_results():
+    if len(measurments) > 0:
+        print(classifer)
+        print("Total number of measurements is:", total_number)
+        print(f"Minimum is {minimum} cm and Maximum is {maximum} cm")
+        print(f"Average is {average} cm")
+        print(f"Total danger readings: {total_danger} \n Total warning readings: {total_warning} \n Total safe readings: {total_safe}")
+        print(info)
+    else:
+        print("NO DATA AVALIABLE")
+
 while True:
     read = input("Enter your measurements in cm or type done to finsih:")
     if read == "done":
@@ -35,13 +46,5 @@ average = average_measurment(measurments)
 total_danger = len(danger_readings)
 total_warning = len(warning_readings)
 total_safe = len(safe_readings)
-
-print(classifer)
-print("Total number of measurements is:", total_number)
-print(f"Minimum is {minimum} cm and Maximum is {maximum} cm")
-print(f"Average is {average} cm")
-print(f"Total danger readings: {total_danger} \n Total warning readings: {total_warning} \n Total safe readings: {total_safe}")
-
-
 info = decision(classifer)
-print(info)
+print_results()

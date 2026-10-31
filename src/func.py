@@ -20,8 +20,11 @@ def decision(dict):
         return "decision: STOP"
     elif "WARNING" in valuss:
         return "decision: SLOW"
-    else:
+    elif "SAFE" in valuss:
         return "decision: MOVE"
+    else:
+        pass
+    
     
 def minimum_measurment(list):
     if len(list) == 0:

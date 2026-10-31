@@ -15,12 +15,12 @@ def total_measurments(list):
 #     return average
 
 def decision(dict):
-    valuss = dict.values()
-    if "DANGER" in valuss:
+    keyss = dict.keys()
+    if "DANGER" in keyss:
         return "decision: STOP"
-    elif "WARNING" in valuss:
+    elif "WARNING" in keyss:
         return "decision: SLOW"
-    elif "SAFE" in valuss:
+    elif "SAFE" in keyss:
         return "decision: MOVE"
     else:
         pass
